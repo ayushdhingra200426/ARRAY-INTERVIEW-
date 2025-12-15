@@ -1,0 +1,16 @@
+// by apna college shardha khapra
+
+#include<iostream>
+using namespace std;
+int buyandsell(vector<int>&arr){
+  int n=arr.size();
+  int buystock=arr[0];
+  int maxprofit=0;
+  for(int i=1;i<n;i++){
+    if(arr[i]>buystock){
+      maxprofit=max(maxprofit,arr[i]-buystock);
+    }
+    buystock=min(arr[i],buystock);
+  }
+}
+
